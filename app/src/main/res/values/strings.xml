@@ -1,0 +1,46 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Weather</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="action_refresh">Refresh</string>
+    <string name="settings">settings</string>
+    <string name="prfLocationLable">Location</string>
+    <string name="prfLocationKey" translatable="false">Location</string>
+    <string name="listkey" translatable="false">Temp Unit</string>
+    <string name="listtitle">Temperature Unit</string>
+    <string name="shareActionBar" translatable="false">Action Bar</string>
+    <string name="prfLocationDefault" translatable="false">cairo</string>
+    <string name="notification" translatable="false">notification</string>
+    <string name="OnNotification"> ON </string>
+    <string name="OffNotification">OFF </string>
+    <string name="onOffNotification">Notifications</string>
+    <string name="min" translatable="false">min</string>
+    <string name="max" translatable="false">max</string>
+    <string name="logo" translatable="false">logo</string>
+    <string name="connection">Missing Internet Connection</string>
+    <string-array name="listItem">
+        <item>@string/metric</item>
+        <item>@string/imperial</item>
+    </string-array>
+    <string-array name="listItemValue">
+        <item>@string/metric</item>
+        <item>@string/imperial</item>
+    </string-array>
+    <string name="metric" translatable="false">Metric</string>
+    <string name="imperial" translatable="false">Imperial</string>
+    <string name="formateTemp" translatable="false">%1.0f \u00B0</string>
+    <string name="today">Today,</string>
+    <string name="TOMORROW">Tomorrow</string>
+    <string name="date" translatable="false">%1$s</string>
+    <string name="humidity" translatable="false">Humidity:<xliff:g id="humidity">%1.0f</xliff:g>%%</string>
+
+    <string name="pressure" translatable="false">Pressure:><xliff:g id="pressure">%1.0f</xliff:g>hpa</string>
+    <string-array name="unit">
+        <item >C</item>
+        <item>F</item>
+    </string-array>
+    <string name="format_wind_imperial" translatable="false">Wind: <xliff:g id="windSpeed">%1.0f </xliff:g>mi/h <xliff:g id="windDirection">%2$s</xliff:g></string>
+    <string name="format_wind_metric" translatable="false">Wind: %1.0f km/h %2$s</string>
+
+
+</resources>

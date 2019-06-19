@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+   <SwitchPreference
+       android:key="@string/notification"
+       android:summaryOn="@string/OnNotification"
+       android:defaultValue="false"
+       android:summaryOff="@string/OffNotification"
+       android:title="@string/onOffNotification"
+       android:icon="@color/sunshine_dark_blue"
+       />
+   <EditTextPreference
+       android:key="@string/prfLocationKey"
+       android:title="@string/prfLocationLable"
+       android:defaultValue="@string/prfLocationDefault"
+       android:inputType="text"
+       android:singleLine="true"
+       app:useSimpleSummaryProvider="true"
+       android:summary="Enter The Location">
+   </EditTextPreference>
+   <ListPreference
+
+       android:key="@string/listkey"
+       android:title="@string/listtitle"
+       android:entries="@array/listItem"
+       app:useSimpleSummaryProvider="true"
+       android:entryValues="@array/listItemValue"
+       android:defaultValue="@string/metric"
+       android:summary="Enter The Unit"
+       >
+   </ListPreference>
+
+</PreferenceScreen>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+       <import type="com.example.sunshine.weatherapp.DisplayingData.WeatherUtility" />
+        <variable
+            name="weatherEntry"
+            type="com.example.sunshine.weatherapp.storingData.WeatherEntry" />
+
+
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/list_item_date_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:focusable="true"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/TOMORROW"
+            app:setdate="@{weatherEntry.date}"
+            />
+
+        <TextView
+            android:id="@+id/list_item_date2_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            app:setdate="@{weatherEntry.date}"
+            android:textColor="#646464"
+            android:focusable="true"
+            android:textSize="16sp"
+            tools:text="25 june"
+            app:layout_constraintStart_toStartOf="@+id/list_item_date_textview"
+            app:layout_constraintTop_toBottomOf="@+id/list_item_date_textview" />
+
+
+        <TextView
+            android:id="@+id/list_item_high_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="76dp"
+            android:focusable="true"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textSize="96sp"
+            app:Temp="@{weatherEntry.maxTemp}"
+            android:contentDescription="@{String.valueOf(weatherEntry.maxTemp)}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/list_item_date_textview"
+            tools:text="25" />
+
+        <TextView
+            android:id="@+id/list_item_low_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="129dp"
+            android:focusable="true"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textSize="48sp"
+            android:contentDescription="@{String.valueOf(weatherEntry.minTemp)}"
+            app:layout_constraintStart_toStartOf="@+id/list_item_high_textview"
+            app:layout_constraintTop_toTopOf="@+id/list_item_high_textview"
+            tools:text="18"
+            app:Temp="@{weatherEntry.minTemp}"
+            />
+
+
+        <ImageView
+            android:id="@+id/list_item_icon"
+            android:layout_width="100dp"
+            android:focusable="true"
+            android:layout_height="100dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="104dp"
+            android:layout_marginEnd="60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/list_item_high_textview"
+            app:layout_constraintTop_toBottomOf="@+id/list_item_date_textview"
+            tools:src="@drawable/a13"
+            app:setImage="@{weatherEntry.code}"
+            android:contentDescription="@{weatherEntry.description}"
+            />
+
+        <TextView
+            android:id="@+id/list_item_forecast_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:focusable="true"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="32dp"
+            tools:text="clear"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#646464"
+            app:layout_constraintEnd_toEndOf="@+id/list_item_icon"
+            app:layout_constraintStart_toStartOf="@+id/list_item_icon"
+            app:layout_constraintTop_toTopOf="@+id/list_item_icon"
+            android:text="@{weatherEntry.description}"
+            />
+
+
+        <TextView
+            android:id="@+id/Humidity"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:focusable="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="44dp"
+            android:fontFamily="sans-serif-light"
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/list_item_low_textview"
+            tools:text="@string/humidity" />
+
+        <TextView
+            android:id="@+id/wind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:focusable="true"
+            android:fontFamily="sans-serif-light"
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="@+id/Humidity"
+            app:layout_constraintTop_toBottomOf="@+id/Humidity"
+            app:windSpeed="@{weatherEntry.windSpeed}"
+            app:windDirection="@{weatherEntry.windDirection}"
+            tools:text="@string/format_wind_imperial" />
+
+        <TextView
+            android:id="@+id/pressure"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="@+id/wind"
+            app:layout_constraintTop_toBottomOf="@+id/wind"
+            tools:text="@string/pressure" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+

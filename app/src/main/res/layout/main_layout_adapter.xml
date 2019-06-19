@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="com.example.sunshine.weatherapp.DisplayingData.WeatherUtility" />
+        <variable
+            name="weatherEntry"
+            type="com.example.sunshine.weatherapp.storingData.WeatherEntry" />
+
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/touch_selector"
+        android:gravity="center_vertical">
+
+
+        <ImageView
+            android:id="@+id/list_item_icon"
+            android:layout_width="32dp"
+            app:setImage="@{weatherEntry.code}"
+            android:contentDescription="@{weatherEntry.description}"
+            android:focusable="true"
+            android:layout_height="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/a1" />
+
+
+        <TextView
+            android:id="@+id/list_item_date_textview"
+            android:layout_width="wrap_content"
+            android:focusable="true"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="4dp"
+            app:setdate="@{weatherEntry.date}"
+            android:fontFamily="sans-serif-condensed"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="#212121"
+            app:layout_constraintStart_toEndOf="@+id/list_item_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="TOMMOROW" />
+
+        <TextView
+            android:id="@+id/list_item_forecast_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:focusable="true"
+            android:text="@{weatherEntry.description}"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:minWidth="48dp"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="#757575"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/list_item_date_textview"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Clear" />
+
+
+        <TextView
+            android:id="@+id/list_item_high_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:layout_marginStart="240dp"
+            android:layout_marginEnd="16dp"
+            app:Temp="@{weatherEntry.maxTemp}"
+            android:contentDescription="@{String.valueOf(weatherEntry.maxTemp)}"
+            android:fontFamily="sans-serif-condensed"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="#212121"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/list_item_date_textview"
+            app:layout_constraintTop_toTopOf="@+id/list_item_date_textview"
+            tools:text="21" />
+
+        <TextView
+            android:id="@+id/list_item_low_textview"
+            android:layout_width="wrap_content"
+            android:focusable="true"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="#757575"
+            app:layout_constraintStart_toStartOf="@+id/list_item_high_textview"
+            app:layout_constraintTop_toTopOf="parent"
+            app:Temp="@{weatherEntry.minTemp}"
+            android:contentDescription="@{String.valueOf(weatherEntry.minTemp)}"
+            tools:text="14" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

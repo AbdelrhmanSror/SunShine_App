@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="layout" name="main">@layout/main_sw600dp_land</item>
+    <item type="layout" name="fragment_details">@layout/fragment_details_wide</item>
+</resources>

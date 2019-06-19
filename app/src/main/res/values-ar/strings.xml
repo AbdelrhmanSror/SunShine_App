@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">الطقس</string>
+    <string name="OffNotification">مفعل</string>
+    <string name="OnNotification">غير مفعل</string>
+    <string name="TOMORROW">غدا</string>
+    <string name="action_refresh">تحديث</string>
+    <string name="connection">لايوجد اتصال بالانترنت</string>
+    <string name="today">اليوم</string>
+    <string name="settings">الاعدادات</string>
+    <string name="prfLocationLable">الموقع</string>
+    <string name="onOffNotification">الاشعارات</string>
+    <string name="listtitle">وحده قياس الحراره</string>
+</resources>
