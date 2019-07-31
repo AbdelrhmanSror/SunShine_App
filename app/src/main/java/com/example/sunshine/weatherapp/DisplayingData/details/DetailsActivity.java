@@ -32,4 +32,10 @@ public class DetailsActivity extends AppCompatActivity {
             ab.setDisplayHomeAsUpEnabled(true);
     }
 
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.left,R.anim.outright);
+
+    }
 }

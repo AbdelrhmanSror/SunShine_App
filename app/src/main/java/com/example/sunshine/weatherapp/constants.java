@@ -19,7 +19,7 @@ public class constants {
     public static final String  POST="POST";
     public static final String DELETE="DELETE";
 
-    public static final String key = "w80eG8ZprWvvKX2mECZTzrG8RR5lFEkS";
+    public static final String key = "1XxhvTXGMm5PWrmGwjwIBuVHXdqymGk6";
     public static final String SAMPLE_URL = "http://dataservice.accuweather.com/forecasts/v1/daily";
     public static final String SAMPLE_URL_CITY_CODE = "http://dataservice.accuweather.com/locations/v1/search?";
     public static final String QUERY_PARAM = "q";

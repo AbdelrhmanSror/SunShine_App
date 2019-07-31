@@ -32,8 +32,10 @@ import java.util.Objects;
  * A simple {@link Fragment} subclass.
  */
 public class DetailsFragment extends Fragment {
-    //private View mRootView;
+    //View binding var.
     private ViewDataBinding bind;
+    //data to be shared if user clicked on share button
+    String sharedData;
 
     public DetailsFragment() {
         setHasOptionsMenu(true);
@@ -89,7 +91,7 @@ public class DetailsFragment extends Fragment {
         return bind.getRoot();
     }
 
-    /* public Intent CreateShareIntent() {
+     /*public Intent CreateShareIntent() {
          Intent mIntent = new Intent(Intent.ACTION_SEND);
          mIntent.setType("text/plain");
          mIntent.putExtra(Intent.EXTRA_TEXT, datax);

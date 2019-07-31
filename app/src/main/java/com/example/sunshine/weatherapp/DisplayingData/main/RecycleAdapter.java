@@ -13,11 +13,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.example.sunshine.weatherapp.BR;
-import com.example.sunshine.weatherapp.DisplayingData.WeatherUtility;
 import com.example.sunshine.weatherapp.R;
 import com.example.sunshine.weatherapp.storingData.WeatherEntry;
 import com.example.sunshine.weatherapp.storingData.WeatherViewModel;
@@ -74,7 +71,7 @@ public class RecycleAdapter extends ListAdapter<WeatherEntry, RecycleAdapter.vie
                 @Override
                 public void onClick(View v) {
 
-                    forecastFragment.updateDetailsActivity(getItem(getAdapterPosition()), itemView, getAdapterPosition());
+                    forecastFragment.openDetailsActivity(getItem(getAdapterPosition()), itemView, getAdapterPosition());
 
                 }
             });
@@ -137,7 +134,7 @@ public class RecycleAdapter extends ListAdapter<WeatherEntry, RecycleAdapter.vie
 
 
     public interface ForecastClickListner {
-        void updateDetailsActivity(WeatherEntry data, View itemView, int itemSelectedPos);
+        void openDetailsActivity(WeatherEntry data, View itemView, int itemSelectedPos);
     }
 
 

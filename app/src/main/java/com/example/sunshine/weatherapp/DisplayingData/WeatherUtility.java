@@ -104,6 +104,10 @@ public class WeatherUtility {
     public static void getDateFormat(TextView view,String date)
     {
         //i want date in details activity to be in format "Today"\n jun 25
+        if(date==null)
+        {
+            return;
+        }
         String Date=FormatDate(view.getContext(),date);
         if(view.getId()==R.id.list_item_date_textview) {
             if (Date.contains(","))

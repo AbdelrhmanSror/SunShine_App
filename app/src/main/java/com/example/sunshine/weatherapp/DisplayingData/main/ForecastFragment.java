@@ -193,7 +193,7 @@ public class ForecastFragment extends Fragment implements RecycleAdapter.Forecas
 
     // opening details activity by sending intents and prints the details of item selected in the details activity
     @Override
-    public void updateDetailsActivity(WeatherEntry data, View itemView, int CurrentItemSelectedPos) {
+    public void openDetailsActivity(WeatherEntry data, View itemView, int CurrentItemSelectedPos) {
         //checking if it is two pane layout or not
         if (Objects.requireNonNull(getActivity()).findViewById(R.id.detailscontainer) == null) {
             Intent x = new Intent(getActivity(), DetailsActivity.class);
@@ -203,6 +203,7 @@ public class ForecastFragment extends Fragment implements RecycleAdapter.Forecas
             if (x.resolveActivity(getActivity().getPackageManager()) != null) {
 
                 startActivity(x);
+                getActivity().overridePendingTransition(R.anim.right,R.anim.outleft);
             }
 
         } else {
